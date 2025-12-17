@@ -1,9 +1,19 @@
+:root {
+    --barva1: rgb(239, 187, 255);
+    --barva2: rgb(216, 150, 255);
+    --barva3: rgb(190, 41, 236);
+    --barva4: rgb(128, 0, 128);
+    --barva5: rgb(102, 0, 102);
+
+    --barva1-trans: rgba(239, 187, 255, 0.5);
+}
+
 body {
-    background-color: rgb(40, 24, 78);
+    background-color: var(--barva5);
 }
 
 h1 {
-    color: white;
+    color: var(--barva1);
     text-align: center;
     font-family: 'Pirata One', sans-serif;
 }
@@ -21,6 +31,7 @@ form {
     align-items: center;
 }
 
+/* PC monitor */
 @media (min-width: 1500px) {
     h1 {
         font-size: 150px;
@@ -37,26 +48,75 @@ form {
     }
 }
 
-input[type="text"] {
+#ukol {
     font-size: 20px;
+    font-family: 'MedievalSharp', sans-serif;
     border-radius: 10px;
     border: none;
     padding: 10px;
     margin-bottom: 20px;
+    text-align: center;
+
+    box-shadow: 3px 2px var(--barva3);
+    background-color: var(--barva2);
+
 }
 
 #ukol::placeholder {
     text-align: center;
+    color: white;
+    font-family: 'MedievalSharp', sans-serif;
 }
 
 input[type="submit"] {
     font-size: 20px;
     border-radius: 10px;
     border: none;
-    background-color: rgb(255, 87, 87);
+    background-color: var(--barva4);
     color: white;
     cursor: pointer;
 
-    box-shadow: 3px 2px;
+    box-shadow: 3px 2px var(--barva3);
     margin: 10px;
+    font-family: 'MedievalSharp', sans-serif;
+}
+
+
+input[type="submit"]:hover {
+    background-color: var(--barva1-trans);
+    box-shadow: 3px 2px var(--barva4);
+}
+
+.cara {
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+/* notebook */
+@media (min-width: 1100px) {
+
+    .cara {
+        width: 1510px;
+        height: 5px;
+        margin-top: 50px;
+    }
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    gap: 20px;
+    list-style-type: square;
+
+    padding: 0;
+    margin-top: 50px;
+    font-family: 'MedievalSharp', sans-serif;
+    font-size: 20px;
+}
+
+li {
+    color: white;
 }
